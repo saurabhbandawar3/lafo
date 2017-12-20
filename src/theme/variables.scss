@@ -38,9 +38,20 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  pace:       rgba(0,51,127,0.8),
+  w:          #ffffff
 );
 
+
+$toolbar-background:#222222;
+@import "../pages/home/home";
+  
+
+$tabs-background:rgba(0,51,127,0.8);
+// Change the color of the tabs text
+$tabs-tab-color-active:color($colors, w);
+$tabs-tab-color-inactive:color($colors, w);
 
 // App iOS Variables
 // --------------------------------------------------

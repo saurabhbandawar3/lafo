@@ -1,0 +1,22 @@
+<ion-header class="heading" padding>
+    <img src="../assets/imgs/logo 2.png" alt="Pace Logo" height="75" >
+</ion-header>
+<ion-content padding class="main">
+    <ion-card class="login_card">
+      
+      <ion-card-header><ion-icon name="person"></ion-icon><p>Sign Up</p></ion-card-header>
+      <ion-item>
+        <ion-label floating color="light"  >Email/UserName</ion-label>
+        <ion-input type = "text" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating color="light" >Password</ion-label>
+        <ion-input type = "password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <button ion-button  class="btn-sigin" full (click)= "register(user)" >
+          Register
+          <ion-icon style="color:#fff; margin-left:1em;"name="arrow-forward">
+          </ion-icon>
+        </button>
+    </ion-card>       
+</ion-content>

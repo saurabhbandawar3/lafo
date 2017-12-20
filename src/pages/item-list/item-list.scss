@@ -1,0 +1,20 @@
+page-item-list {
+    .heading{
+        background: rgba(0,51,127,0.8);
+    } 
+    .main{
+        //background-image: url("../assets/imgs/pace-bg1.jpg");
+       // background-size: 1424px 752px;
+        //text-align: center;
+        background-color: rgba(0,51,127,0.5);
+    }
+    .scroll-content{
+        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+      } 
+      ion-segment{
+          border:1px solid black;
+          background-color: white;
+      }
+}

@@ -1,6 +1,6 @@
 {
   "name": "lafo",
-  "app_id": "",
+  "app_id": "eed5eef8",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

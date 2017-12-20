@@ -1,0 +1,57 @@
+page-signup {
+  .heading{
+    background: rgba(0,51,127,0.8);
+} 
+.main{
+    background-image: url("../assets/imgs/pace-bg1.jpg");
+    background-size: 1424px 752px;
+    text-align: center;
+}
+.scroll-content{
+    justify-content: center;
+    display: flex;
+  }
+ion-card.card{
+    position: fixed;
+    background: rgba(0,51,127,0.8);
+    width:20em;
+    height: 23em;
+    margin-top: 4em;
+    border: 1px solid white;
+    .card-header{
+        color: white;
+    }
+    p{
+        color: #ffffff
+    }
+  }
+
+.btn-sigin{
+    margin-top: 2em;
+    background: rgba(0,51,127,0.5);
+    //border: 1px solid white;
+    color: white;
+    padding: 1em;
+    text-align: center;
+
+  }
+
+.btn-sigin:hover{
+    background-color:light; 
+  }
+  .item {
+    margin-bottom: 10px;
+    background: transparent;
+    border: 1px medium white;
+    .text-input{
+      color: white;
+    }
+  }
+@media all and (max-width: 600px) {
+    .main{
+        background-image: url("../assets/imgs/pace-bg1.jpg");
+        background-size: 414px 736px;
+        background-repeat: no-repeat;
+    }   
+}
+}

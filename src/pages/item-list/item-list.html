@@ -1,0 +1,27 @@
+<ion-header class="heading" padding>
+    <img src="../assets/imgs/logo 2.png" alt="Pace Logo" height="75" >
+</ion-header>
+<ion-content padding class="main">
+    <!-- <ion-scroll scrollY="true" style="height:50em"> -->
+        <ion-list>
+            <ion-item *ngFor="let item of itemListref$ | async ">
+                <ion-avatar item-start style="height:100px;width:100px;">
+                    <img src="../assets/imgs/lafo1.png" style="height:100px;width:100px;"   >
+                </ion-avatar>
+                <h1>Item Information</h1>
+                <h2>Status :{{item.lof}} | Type: {{item.itemType}} </h2>
+                <h3>Address Found/Lost :{{item.address}}</h3>
+                <h3>Date Found/Lost:{{item.myDate}}</h3>
+                <h3>Item Description:{{item.description}}</h3>
+                <h1>Contact Information: </h1>
+                <h2>Name :{{item.fname}}</h2>
+                <h2>Mobile:{{item.mobile}}</h2>
+              
+            </ion-item>
+        </ion-list>
+    <!-- </ion-scroll> -->
+
+    <ion-item *ngFor="let item of arrData;">
+        {{item.$value}}
+      </ion-item>
+</ion-content>

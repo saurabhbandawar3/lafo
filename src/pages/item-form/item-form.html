@@ -1,0 +1,66 @@
+<ion-header class="heading" padding>
+    <img src="../assets/imgs/logo 2.png" alt="Pace Logo" height="75" >
+</ion-header>
+
+<ion-content padding class="main">
+    <ion-scroll scrollY="true" style="height:50em">
+        <ion-item>
+            <h1>Please Enter Item Details</h1>
+        </ion-item>
+        <ion-item>
+                <ion-label >Item</ion-label>
+                <ion-select [(ngModel)]="item.lof">  
+                    <ion-option value="found" selected>Found</ion-option>
+                    <ion-option value="lost">Lost </ion-option>
+                </ion-select>
+            </ion-item>
+        <ion-item>
+            <ion-label >Item Type</ion-label>
+            <ion-select [(ngModel)]="item.itemType">
+                <ion-option value="electronic" selected>Electronic</ion-option>
+                <ion-option value="other">Others... </ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >Item description</ion-label>
+            <ion-input type = "text" [(ngModel)]="item.description" ></ion-input> 
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Venue found/lost</ion-label>
+            <ion-input type = "text" [(ngModel)]="item.address" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Date <br> lost/found</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" placeholder="01/01/2016" [(ngModel)]="item.myDate" style="color:#000"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >Mobile Number</ion-label>
+            <ion-input  type = "tel" [(ngModel)]="item.mobile" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating >Full name</ion-label>
+            <ion-input type = "text" [(ngModel)]="item.fname"></ion-input>
+        </ion-item>
+
+        <ion-item style="height:7em;">
+                <label style="color:#000">Image</label>
+                <button ion-button full color="light" (click)="fileInput.click()"> 
+                    <ion-icon name="add" style="margin-right:0.5em">
+
+                    </ion-icon>
+                     Upload Image
+                </button>
+                <p>OR</p>
+                <button ion-button full color="light" (click)="takePhoto()"> 
+                        <ion-icon name="camera" style="margin-right:0.5em">    
+                        </ion-icon>
+                        Take Picture
+                </button>
+                <div hidden><input type="file"  #fileInput (change)="onFileFromStorageChosen($event)" /></div>                
+        </ion-item>
+        <ion-item>
+        <button ion-button round padding full color="primary" class="btn-submit"  (click)="createItem()">Submit </button>
+        </ion-item>
+       </ion-scroll>
+</ion-content>

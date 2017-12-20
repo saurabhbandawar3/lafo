@@ -1,17 +1,28 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-header class="heading" padding>
+    <img src="../assets/imgs/logo 2.png" alt="Pace Logo" height="75" class="l1" >
+    <img src="../assets/imgs/lafo1.png" class="logo" />
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="main">
+    
+    <ion-card padding>
+    
+        <ion-list>
+            <ion-list-header color="pace" > 
+                <ion-title class="menu-side" >
+                    <h1 style="font-size:20px; color:#fff;"><ion-icon name="search"></ion-icon> Pace Lost & Found</h1>
+                </ion-title>
+                <ion-item>
+                        <p style="font-size:20px; color:#fff;">
+                            Report Lost/Found Item
+                        </p>
+                    </ion-item>
+            </ion-list-header>
+            <button menuClose ion-item no-padding item-bcg class="main-menu" *ngFor="let p of pages" (click)="open(p)" padding>
+                <ion-icon [name]="p.icon" ></ion-icon> 
+                {{p.title}}
+            </button>
+        </ion-list>
+</ion-card>
+
 </ion-content>
