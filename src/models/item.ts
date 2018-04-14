@@ -5,5 +5,5 @@ export interface Item{
     address:string,
     myDate:string,
     mobile:number,
-    fname:string
+    fname:string,
 }

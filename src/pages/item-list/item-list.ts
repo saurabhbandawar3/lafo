@@ -1,9 +1,9 @@
-import { Item } from './../../models/item';
-import { AngularFireDatabase } from 'angularfire2/database';
+//import { Item } from './../../models/item';
+import { AngularFireDatabase} from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { FirebaseApp } from '@firebase/app-types';
-import { FirebaseService } from '@firebase/app-types/private';
+//import { FirebaseApp } from '@firebase/app-types';
+//import { FirebaseService } from '@firebase/app-types/private';
 import { Observable } from 'rxjs/Observable';
 
 

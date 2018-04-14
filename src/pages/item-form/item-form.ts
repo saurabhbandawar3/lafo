@@ -33,6 +33,7 @@ export class ItemFormPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemFormPage');
   }
+  url:any;
 
   async takePhoto(){
     try{
@@ -51,7 +52,7 @@ export class ItemFormPage {
       this.pictures = storage().ref('pictures/myPhoto'+ this.generateId());
       this.pictures.putString(this.image, `data_url`);
       console.log(this.pictures.getDownloadURL);
-     
+      this.pictures.getDownloadURL().then(url => this.url = url);
     }
     catch(e){
       console.error(e);
@@ -97,6 +98,7 @@ export class ItemFormPage {
   item = {} as Item;
 
   createItem(){
+    console.log(this.url)
     this.aDatabase.list("/items/").push(this.item).then(()=>{
       this.navCtrl.push(ItemListPage);
     })
